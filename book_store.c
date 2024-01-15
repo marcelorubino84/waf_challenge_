@@ -7,6 +7,12 @@ float cost_calculation(int quant_volumes, int volumes[]);
 int main(void)
 {
     int volumes[] = {2, 2, 2, 1, 1};
+    int quant_volumes = sizeof(volumes) / sizeof(volumes[0]);
+
+    float total_cost = cost_calculation(quant_volumes, volumes);
+
+    printf("The cheapest offer for the customer is %f€\n", total_cost);
+    return 0;
 }
 
 float cost_calculation(int quant_volumes, int volumes[])
