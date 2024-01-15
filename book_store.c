@@ -41,6 +41,13 @@ float cost_calculation(int quant_volumes, int volumes[])
         total_cost = total_cost * (1.0 - total_discount);
 
     }
+    else
+    {
+        for (int i = 0; i < quant_volumes; i++)
+        {
+            total_cost += volumes[i] * BOOK_PRICE;
+        }
+    }
     return total_cost;
 }
 
