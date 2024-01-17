@@ -14,6 +14,9 @@ function cheapestOfferCalculator(cart)
     while (Object.values(bookCounts).some(count => count > 0)) {
       let differentBooks = 0;
 
-      
+      for (const book in bookCounts) {
+        // This needs to be completed
+        // Probably a conditional statement could be used here to increment the book count.
+      }
     }
 }
