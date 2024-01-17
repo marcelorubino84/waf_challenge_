@@ -18,5 +18,8 @@ function cheapestOfferCalculator(cart)
         // This needs to be completed
         // Probably a conditional statement could be used here to increment the book count.
       }
+
+      totalPrice += differentBooks * basePrice * (1 - discounts[differentBooks - 1]);
     }
+    return totalPrice;
 }
