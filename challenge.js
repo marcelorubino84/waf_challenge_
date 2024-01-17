@@ -23,3 +23,10 @@ function cheapestOfferCalculator(cart)
     }
     return totalPrice;
 }
+
+//Checking for shopping cart input (numbers of books and volumes)
+const shoppingCart = [1, 1, 2, 2, 3, 3, 4, 5];
+
+const cheapestOffer = calculateCheapestOffer(shoppingCart);
+
+console.log("The cheapest combination is: ", cheapestOffer.toFixed(2) + "€");
