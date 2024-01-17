@@ -9,6 +9,11 @@ function cheapestOfferCalculator(cart)
       bookCounts[book] = (bookCounts[book] || 0) + 1;
     });
 
-
+    let totalPrice = 0;
     
+    while (Object.values(bookCounts).some(count => count > 0)) {
+      let differentBooks = 0;
+
+      
+    }
 }
