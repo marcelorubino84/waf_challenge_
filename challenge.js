@@ -15,8 +15,10 @@ function cheapestOfferCalculator(cart)
       let differentBooks = 0;
 
       for (const book in bookCounts) {
-        // This needs to be completed
-        // Probably a conditional statement could be used here to increment the book count.
+        if (bookCounts[book] > 0) {
+          differentBooks++;
+          bookCounts[book]--;
+        }
       }
 
       totalPrice += differentBooks * basePrice * (1 - discounts[differentBooks - 1]);
@@ -25,8 +27,8 @@ function cheapestOfferCalculator(cart)
 }
 
 //Checking for shopping cart input (numbers of books and volumes)
-const shoppingCart = [1, 1, 2, 2, 3, 3, 4, 5];
+const shoppingCart = [1, 2, 3];
 
-const cheapestOffer = calculateCheapestOffer(shoppingCart);
+const cheapestOffer = cheapestOfferCalculator(shoppingCart);
 
 console.log("The cheapest combination is: ", cheapestOffer.toFixed(2) + "€");
